@@ -1,12 +1,18 @@
 package com.example.demoweb.model;
 
+import java.time.Instant;
+import java.util.Date;
+
 public class Post {
 
     private static String text;
     private static Integer likes = 0;
 
+    private Date creationDate;
+
     public Post (String textContent) {
         this.text = textContent;
+        this.creationDate = Date.from(Instant.now());
     }
 
     public String getText() {
@@ -15,6 +21,10 @@ public class Post {
 
     public Integer getLikes() {
         return likes;
+    }
+
+    public Date getCreationDate(){
+        return creationDate;
     }
 
 }
