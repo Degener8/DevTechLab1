@@ -5,8 +5,8 @@ import java.util.Date;
 
 public class Post {
 
-    private static String text;
-    private static Integer likes = 0;
+    private String text;
+    private Integer likes = 0;
 
     private Date creationDate;
 
